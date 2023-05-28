@@ -1,0 +1,36 @@
+name: Frontend Project
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-frontend:
+    runs-on: ubuntu-latest
+    environment: testing
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: Run install
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: install
+
+      - name: Run lint in sub-folder
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: lint
+
+      - name: Run prettier in sub-folder
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: prettier
