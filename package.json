@@ -11,7 +11,8 @@
     "prettier": "npx prettier -c ./src",
     "prettier-fix": " npx prettier -w ./src",
     "preview": "vite preview",
-    "test": "jest"
+    "test": "jest",
+    "test-coverage": "jest --coverage"
   },
   "dependencies": {
     "react": "^18.2.0",

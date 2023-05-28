@@ -13,4 +13,7 @@ export default {
     '\\.(css|sass|scss)$': 'identity-obj-proxy',
     '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/tests/__mocks__/fileMock.js',
   },
+  modulePathIgnorePatterns: [
+    "<rootDir>/__tests__/__mocks__"
+  ]
 }
