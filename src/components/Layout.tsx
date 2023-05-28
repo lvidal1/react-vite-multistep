@@ -1,9 +1,15 @@
+import styles from '@styles/Layout.module.scss';
 
+type LayoutProps = {
+  children: JSX.Element;
+};
 
-function Layout() {
+function Layout({ children }: LayoutProps) {
   return (
-    <div data-testid="layout">Layout</div>
-  )
+    <div data-testid="layout" className={styles.container}>
+      {children}
+    </div>
+  );
 }
 
-export default Layout
+export default Layout;

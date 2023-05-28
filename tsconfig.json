@@ -23,6 +23,7 @@
     /* Aliases */
     "paths": {
       "@/*": ["./src"],
+      "@styles/*": ["./src/assets/styles/*"],
       "@components/*": ["./src/components/*"],
     }
   },
