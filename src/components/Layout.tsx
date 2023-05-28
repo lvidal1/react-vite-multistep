@@ -1,7 +1,7 @@
 import styles from '@styles/Layout.module.scss';
 
 type LayoutProps = {
-  children: JSX.Element;
+  children?: JSX.Element;
 };
 
 function Layout({ children }: LayoutProps) {
