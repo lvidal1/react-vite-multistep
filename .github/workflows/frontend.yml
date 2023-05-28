@@ -25,12 +25,17 @@ jobs:
         with:
           cmd: install
 
-      - name: Run lint in sub-folder
+      - name: Run lint
         uses: borales/actions-yarn@v4
         with:
           cmd: lint
 
-      - name: Run prettier in sub-folder
+      - name: Run prettier
         uses: borales/actions-yarn@v4
         with:
           cmd: prettier
+
+      - name: Run jest
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: test
