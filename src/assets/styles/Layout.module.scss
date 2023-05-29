@@ -12,6 +12,10 @@
   @apply pt-10 lg:pt-24;
 }
 
+.main {
+  @apply pt-8 lg:pt-20;
+}
+
 .title {
   @apply text-center text-2xl lg:text-4xl text-purple-200;
 }

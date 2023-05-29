@@ -2,7 +2,7 @@ import styles from '@styles/Layout.module.scss';
 import imageURL from '@images/bg.jpg';
 
 type LayoutProps = {
-  children?: JSX.Element;
+  children?: JSX.Element | string;
   title?: string;
   copy?: string;
 };

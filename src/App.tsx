@@ -1,10 +1,11 @@
-import Layout from '@components/Layout';
+import { BrowserRouter } from 'react-router-dom';
+import Router from './router';
 
 function App() {
   return (
-    <Layout title="Super test form" copy="Initial info">
-      <p>a</p>
-    </Layout>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
   );
 }
 
