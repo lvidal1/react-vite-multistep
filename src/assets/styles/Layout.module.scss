@@ -1,3 +1,8 @@
 .container {
   @apply text-sm bg-cover bg-center h-screen w-screen;
 }
+
+.main {
+  @apply md:max-w-7xl lg:max-w-8xl mx-auto;
+  @apply px-4 md:px-10 lg:px-20;
+}

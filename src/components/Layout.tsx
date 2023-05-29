@@ -11,7 +11,9 @@ function Layout({ children }: LayoutProps) {
     <div data-testid="layout" className={styles.container} style={{
       backgroundImage: `url(${imageURL})`,
     }}>
-      {children}
+      <main className={styles.main}>
+        {children}
+      </main>
     </div>
   );
 }
