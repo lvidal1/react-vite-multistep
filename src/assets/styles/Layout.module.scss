@@ -2,7 +2,20 @@
   @apply text-sm bg-cover bg-center h-screen w-screen;
 }
 
-.main {
+.main,
+.header {
   @apply md:max-w-7xl lg:max-w-8xl mx-auto;
   @apply px-4 md:px-10 lg:px-20;
+}
+
+.header {
+  @apply pt-10 lg:pt-24;
+}
+
+.title {
+  @apply text-center text-2xl lg:text-4xl text-purple-200;
+}
+
+.copy {
+  @apply mt-4 text-center lg:text-2xl text-purple-100;
 }

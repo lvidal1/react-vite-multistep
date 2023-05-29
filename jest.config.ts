@@ -11,7 +11,7 @@ export default {
     "^@/(.*)$": "<rootDir>/src/$1",
     '^@components/(.*)': '<rootDir>/src/components/$1',
     '\\.(css|sass|scss)$': 'identity-obj-proxy',
-    '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/tests/__mocks__/fileMock.js',
+    '\\.(gif|ttf|eot|svg|png|jpg)$': '<rootDir>/__tests__/__mocks__/fileMock.js',
   },
   modulePathIgnorePatterns: [
     "<rootDir>/__tests__/__mocks__"
