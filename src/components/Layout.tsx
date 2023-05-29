@@ -3,8 +3,8 @@ import imageURL from '@images/bg.jpg';
 
 type LayoutProps = {
   children?: JSX.Element | string;
-  title?: string;
-  copy?: string;
+  title?: string | null;
+  copy?: string | null;
 };
 
 function Layout({ children, title, copy }: LayoutProps) {
