@@ -7,8 +7,8 @@ import Select from './Select';
 import Button from './Button';
 
 type FormValues = {
-  firstName: string;
-  lastName: string;
+  username: string;
+  email: string;
   country: string;
 };
 
@@ -17,8 +17,8 @@ type FormProps = {
 };
 
 const validationSchema = object().shape({
-  firstName: string().required(),
-  lastName: string().required(),
+  username: string().required(),
+  email: string().email().required(),
   country: string().required()
 });
 
@@ -40,19 +40,19 @@ const PersonalForm = ({ saveData }: FormProps) => {
       data-testid="personalForm">
       <Input
         type={'text'}
-        id={'firstName'}
-        dataTestId={'firstName'}
-        register={register('firstName')}
-        label="First Name"
-        error={errors.firstName?.message}
+        id={'username'}
+        dataTestId={'username'}
+        register={register('username')}
+        label="Username"
+        error={errors.username?.message}
       />
       <Input
-        type={'text'}
-        id={'lastName'}
-        dataTestId={'lastName'}
-        register={register('lastName')}
-        label="Last Name"
-        error={errors.lastName?.message}
+        type={'email'}
+        id={'email'}
+        dataTestId={'email'}
+        register={register('email')}
+        label="Email"
+        error={errors.email?.message}
       />
       <Select
         id={'country'}
