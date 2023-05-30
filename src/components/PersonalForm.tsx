@@ -26,8 +26,8 @@ const PersonalForm = ({ saveData }: FormProps) => {
   const {
     register,
     handleSubmit,
-    formState: { errors }
-  } = useForm<FormValues>({ resolver: yupResolver(validationSchema) });
+    formState: { isValid, errors }
+  } = useForm<FormValues>({ resolver: yupResolver(validationSchema), mode: 'onChange' });
 
   const submitHandler = (data: FormValues) => {
     saveData(data);
@@ -61,7 +61,7 @@ const PersonalForm = ({ saveData }: FormProps) => {
         label="Country"
         error={errors.country?.message}
       />
-      <Button label={'Continue'} dataTestId={'button'} disabled={false} />
+      <Button label={'Continue'} dataTestId={'button'} disabled={!isValid} />
     </form>
   );
 };

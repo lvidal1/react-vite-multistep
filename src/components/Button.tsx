@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import styles from '@styles/components/Button.module.scss';
 
 type ButtonProps = {
@@ -8,7 +9,10 @@ type ButtonProps = {
 
 function Button({ dataTestId, label, disabled }: ButtonProps) {
   return (
-    <button className={styles.button} data-testid={dataTestId} disabled={disabled}>
+    <button
+      className={classNames(styles.button, disabled ? styles.disabled : '')}
+      data-testid={dataTestId}
+      disabled={disabled}>
       {label}
     </button>
   );
