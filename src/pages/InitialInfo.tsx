@@ -1,5 +1,5 @@
 import Layout from '@components/Layout';
-import PersonalForm from '@components/PersonalForm';
+import UserForm from '@components/UserForm';
 import { useTranslation } from 'react-i18next';
 
 function InitialInfo() {
@@ -11,7 +11,7 @@ function InitialInfo() {
 
   return (
     <Layout title={t('initialInfo.title')} copy={t('initialInfo.copy')}>
-      <PersonalForm saveData={next} />
+      <UserForm saveData={next} />
     </Layout>
   );
 }

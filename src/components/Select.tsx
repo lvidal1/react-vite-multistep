@@ -21,10 +21,9 @@ function Select({ id, label, dataTestId, register, error, placeholder }: SelectP
         data-testid={dataTestId}
         {...register}
         className={styles.input}
-        placeholder={placeholder}>
-        <option value="" disabled selected>
-          {placeholder}
-        </option>
+        placeholder={placeholder}
+        defaultValue="">
+        <option value="">{placeholder}</option>
         <option value="USA">USA</option>
         <option value="Canada">Canada</option>
         <option value="UK">UK</option>

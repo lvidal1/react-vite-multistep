@@ -3,7 +3,7 @@ import { object, string } from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useTranslation } from 'react-i18next';
 
-import styles from '@styles/components/PersonalForm.module.scss';
+import styles from '@styles/components/UserForm.module.scss';
 import Input from './Input';
 import Select from './Select';
 import Button from './Button';
@@ -24,7 +24,7 @@ const validationSchema = object().shape({
   country: string().required()
 });
 
-const PersonalForm = ({ saveData }: FormProps) => {
+const UserForm = ({ saveData }: FormProps) => {
   const {
     register,
     handleSubmit,
@@ -41,7 +41,7 @@ const PersonalForm = ({ saveData }: FormProps) => {
     <form
       onSubmit={handleSubmit(submitHandler)}
       className={styles.container}
-      data-testid="personalForm">
+      data-testid="userForm">
       <Input
         type={'text'}
         id={'username'}
@@ -73,4 +73,4 @@ const PersonalForm = ({ saveData }: FormProps) => {
   );
 };
 
-export default PersonalForm;
+export default UserForm;

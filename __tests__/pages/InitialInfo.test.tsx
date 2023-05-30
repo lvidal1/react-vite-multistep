@@ -14,7 +14,7 @@ describe("InitialInfo page", () => {
 
   it("should include form", async () => {
     renderForm(<InitialInfo />);
-    expect(screen.getByTestId("personalForm")).toBeInTheDocument()
+    expect(screen.getByTestId("userForm")).toBeInTheDocument()
   });
 
 });
