@@ -4,6 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import styles from '@styles/components/PersonalForm.module.scss';
 import Input from './Input';
 import Select from './Select';
+import Button from './Button';
 
 type FormValues = {
   firstName: string;
@@ -60,7 +61,7 @@ const PersonalForm = ({ saveData }: FormProps) => {
         label="Country"
         error={errors.country?.message}
       />
-      <button type="submit">Submit</button>
+      <Button label={'Continue'} dataTestId={'button'} disabled={false} />
     </form>
   );
 };

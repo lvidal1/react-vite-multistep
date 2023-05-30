@@ -7,6 +7,9 @@ export default {
         "purple-100": "#817CA5",
         "purple-200": "#413C5F"
       },
+      height: {
+        '15': '3.75rem'
+      },
       maxWidth: {
         'sm/1': '25rem',
         '8xl': '90rem',
