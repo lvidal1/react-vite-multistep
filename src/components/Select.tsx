@@ -1,4 +1,5 @@
 import styles from '@styles/components/Input.module.scss';
+import ErrorText from './ErrorText';
 
 type SelectProps = {
   dataTestId: string;
@@ -20,7 +21,7 @@ function Select({ id, label, dataTestId, register, error }: SelectProps) {
         <option value="Canada">Canada</option>
         <option value="UK">UK</option>
       </select>
-      {error && <p>{error}</p>}
+      {error && <ErrorText message={error} />}
     </div>
   );
 }

@@ -5,7 +5,8 @@ export default {
     extend: {
       colors: {
         "purple-100": "#817CA5",
-        "purple-200": "#413C5F"
+        "purple-200": "#413C5F",
+        "error": "#be123c"
       },
       height: {
         '15': '3.75rem'

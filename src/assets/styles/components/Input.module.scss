@@ -9,3 +9,7 @@
 .input {
   @apply h-10 px-4 outline-none text-sm text-purple-200 mt-1;
 }
+
+.inputError {
+  @apply border border-error;
+}

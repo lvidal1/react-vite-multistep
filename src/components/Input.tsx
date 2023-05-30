@@ -1,4 +1,6 @@
+import classNames from 'classnames';
 import styles from '@styles/components/Input.module.scss';
+import ErrorText from './ErrorText';
 
 type InputProps = {
   dataTestId: string;
@@ -15,8 +17,14 @@ function Input({ id, type, label, dataTestId, register, error }: InputProps) {
       <label htmlFor={id} className={styles.label}>
         {label}
       </label>
-      <input type={type} id={id} data-testid={dataTestId} {...register} className={styles.input} />
-      {error && <p>{error}</p>}
+      <input
+        type={type}
+        id={id}
+        data-testid={dataTestId}
+        {...register}
+        className={classNames(styles.input, error ? styles.inputError : '')}
+      />
+      {error && <ErrorText message={error} />}
     </div>
   );
 }
