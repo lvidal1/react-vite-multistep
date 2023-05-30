@@ -1,6 +1,9 @@
 import { useForm } from 'react-hook-form';
 import { object, string } from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
+import styles from '@styles/components/PersonalForm.module.scss';
+import Input from './Input';
+import Select from './Select';
 
 type FormValues = {
   firstName: string;
@@ -26,32 +29,34 @@ const PersonalForm = ({ saveData }: FormProps) => {
   } = useForm<FormValues>({ resolver: yupResolver(validationSchema) });
 
   const submitHandler = (data: FormValues) => {
-    console.log(data);
     saveData(data);
   };
 
   return (
-    <form onSubmit={handleSubmit(submitHandler)}>
-      <div>
-        <label htmlFor="firstName">First Name</label>
-        <input type="text" id="firstName" data-testid="firstName" {...register('firstName')} />
-        {errors?.firstName && <p>{errors.firstName.message}</p>}
-      </div>
-      <div>
-        <label htmlFor="lastName">Last Name</label>
-        <input type="text" id="lastName" data-testid="lastName" {...register('lastName')} />
-        {errors?.lastName && <p>{errors.lastName.message}</p>}
-      </div>
-      <div>
-        <label htmlFor="country">Country</label>
-        <select id="country" {...register('country')} data-testid="country">
-          <option value="">Select Country</option>
-          <option value="USA">USA</option>
-          <option value="Canada">Canada</option>
-          <option value="UK">UK</option>
-        </select>
-        {errors?.country && <p>{errors.country.message}</p>}
-      </div>
+    <form onSubmit={handleSubmit(submitHandler)} className={styles.container}>
+      <Input
+        type={'text'}
+        id={'firstName'}
+        dataTestId={'firstName'}
+        register={register('firstName')}
+        label="First Name"
+        error={errors.firstName?.message}
+      />
+      <Input
+        type={'text'}
+        id={'lastName'}
+        dataTestId={'lastName'}
+        register={register('lastName')}
+        label="Last Name"
+        error={errors.lastName?.message}
+      />
+      <Select
+        id={'country'}
+        dataTestId={'country'}
+        register={register('country')}
+        label="Country"
+        error={errors.country?.message}
+      />
       <button type="submit">Submit</button>
     </form>
   );

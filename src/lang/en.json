@@ -2,5 +2,9 @@
   "home": {
     "title": "Home page",
     "copy": "This is the home page"
+  },
+  "initialInfo": {
+    "title": "Super test form",
+    "copy": "Initial info"
   }
 }

@@ -1,0 +1,11 @@
+.formGroup {
+  @apply flex flex-col;
+}
+
+.label {
+  @apply text-white;
+}
+
+.input {
+  @apply h-10 px-4 outline-none text-sm text-purple-200 mt-1;
+}
