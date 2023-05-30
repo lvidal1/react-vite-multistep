@@ -2,5 +2,26 @@
   "home": {
     "title": "Home page",
     "copy": "This is the home page"
+  },
+  "initialInfo": {
+    "title": "Super test form",
+    "copy": "Initial info"
+  },
+  "userForm": {
+    "username": {
+      "label": "Username",
+      "placeholder": "Input username"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "Input email"
+    },
+    "country": {
+      "label": "Country",
+      "placeholder": "Select country"
+    }
+  },
+  "button": {
+    "continue": "Continue"
   }
 }

@@ -2,14 +2,19 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    colors: {
-      "purple-100": "#817CA5",
-      "purple-200": "#413C5F"
-    },
     extend: {
+      colors: {
+        "purple-100": "#817CA5",
+        "purple-200": "#413C5F",
+        "error": "#be123c"
+      },
+      height: {
+        '15': '3.75rem'
+      },
       maxWidth: {
+        'sm/1': '25rem',
         '8xl': '90rem',
-      }
+      },
     }
   },
   plugins: []

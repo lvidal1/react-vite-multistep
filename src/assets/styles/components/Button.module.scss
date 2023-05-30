@@ -1,0 +1,8 @@
+.button {
+  @apply h-15 text-lg md:text-2xl w-full rounded-md;
+  @apply bg-white text-purple-200 text-center font-medium;
+}
+
+.disabled {
+  @apply opacity-20;
+}
