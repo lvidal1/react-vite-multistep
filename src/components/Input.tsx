@@ -9,9 +9,10 @@ type InputProps = {
   label: string;
   register: any;
   type: string;
+  placeholder?: string;
 };
 
-function Input({ id, type, label, dataTestId, register, error }: InputProps) {
+function Input({ id, type, label, dataTestId, register, error, placeholder }: InputProps) {
   return (
     <div className={styles.formGroup}>
       <label htmlFor={id} className={styles.label}>
@@ -22,6 +23,7 @@ function Input({ id, type, label, dataTestId, register, error }: InputProps) {
         id={id}
         data-testid={dataTestId}
         {...register}
+        placeholder={placeholder}
         className={classNames(styles.input, error ? styles.inputError : '')}
       />
       {error && <ErrorText message={error} />}

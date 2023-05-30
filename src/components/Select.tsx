@@ -7,16 +7,24 @@ type SelectProps = {
   id: string;
   label: string;
   register: any;
+  placeholder?: string;
 };
 
-function Select({ id, label, dataTestId, register, error }: SelectProps) {
+function Select({ id, label, dataTestId, register, error, placeholder }: SelectProps) {
   return (
     <div className={styles.formGroup}>
       <label htmlFor={id} className={styles.label}>
         {label}
       </label>
-      <select id={id} data-testid={dataTestId} {...register} className={styles.input}>
-        <option value="">Select Country</option>
+      <select
+        id={id}
+        data-testid={dataTestId}
+        {...register}
+        className={styles.input}
+        placeholder={placeholder}>
+        <option value="" disabled selected>
+          {placeholder}
+        </option>
         <option value="USA">USA</option>
         <option value="Canada">Canada</option>
         <option value="UK">UK</option>
