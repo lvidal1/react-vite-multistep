@@ -33,7 +33,10 @@ const PersonalForm = ({ saveData }: FormProps) => {
   };
 
   return (
-    <form onSubmit={handleSubmit(submitHandler)} className={styles.container}>
+    <form
+      onSubmit={handleSubmit(submitHandler)}
+      className={styles.container}
+      data-testid="personalForm">
       <Input
         type={'text'}
         id={'firstName'}
