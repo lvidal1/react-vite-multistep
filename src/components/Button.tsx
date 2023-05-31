@@ -5,7 +5,7 @@ type ButtonProps = {
   dataTestId?: string;
   disabled?: boolean;
   label: string;
-  onClick: () => void;
+  onClick?: () => void;
 };
 
 function Button({ dataTestId, label, disabled, onClick }: ButtonProps) {
