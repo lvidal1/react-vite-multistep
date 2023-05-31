@@ -1,9 +1,11 @@
 import appStore from '../store/appStore';
+import { useNavigate } from 'react-router-dom';
 import classNames from 'classnames';
 import { IStep } from '../store/types';
 
 function Navigation() {
   const { steps, step: currentStep } = appStore();
+  const navigate = useNavigate();
 
   const getBackground = (step: IStep, _idx: number) => {
     if (currentStep == _idx) return 'bg-purple-400';
@@ -17,7 +19,15 @@ function Navigation() {
         return (
           <li key={_idx} className="flex items-center space-x-2 px-2">
             <span className={classNames('h-4 w-4 rounded-sm', getBackground(step, _idx))}></span>
-            <span className={'text-purple-100'}>{step.label}</span>
+            {step.completed ? (
+              <span
+                onClick={() => navigate(step.path)}
+                className={'text-purple-100 cursor-pointer hover:text-underline'}>
+                {step.label}
+              </span>
+            ) : (
+              <span className={'text-purple-100'}>{step.label}</span>
+            )}
           </li>
         );
       })}
