@@ -7,6 +7,10 @@
     "title": "Super test form",
     "copy": "Initial info"
   },
+  "password": {
+    "title": "Super test form",
+    "copy": "Password screen"
+  },
   "userForm": {
     "username": {
       "label": "Username",
