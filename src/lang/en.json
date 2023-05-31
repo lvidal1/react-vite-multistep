@@ -11,6 +11,10 @@
     "title": "Super test form",
     "copy": "Password screen"
   },
+  "review": {
+    "title": "Super test form",
+    "copy": "Review screen"
+  },
   "userForm": {
     "username": {
       "label": "Username",
