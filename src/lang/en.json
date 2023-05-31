@@ -37,5 +37,13 @@
   },
   "button": {
     "continue": "Continue"
+  },
+  "error": {
+    "password": {
+      "min": "Password must be at 3 char long"
+    },
+    "repeat_password": {
+      "doesNotMatch": "Passwords does not match"
+    }
   }
 }

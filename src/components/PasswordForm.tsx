@@ -16,14 +16,18 @@ type FormProps = {
   saveData: (data: FormValues) => void;
 };
 
-const validationSchema = object().shape({
-  password: string().required().min(3, 'Password must be at 3 char long'),
-  repeat_password: string()
-    .required()
-    .oneOf([ref('password')], 'Passwords does not match')
-});
-
 const PasswordForm = ({ saveData }: FormProps) => {
+  const { t } = useTranslation();
+
+  const validationSchema = object().shape({
+    password: string()
+      .required()
+      .min(3, t('error.password.min') || ''),
+    repeat_password: string()
+      .required()
+      .oneOf([ref('password')], t('error.repeat_password.doesNotMatch') || '')
+  });
+
   const {
     register,
     handleSubmit,
@@ -32,8 +36,6 @@ const PasswordForm = ({ saveData }: FormProps) => {
     resolver: yupResolver(validationSchema),
     mode: 'onChange'
   });
-
-  const { t } = useTranslation();
 
   const submitHandler = (data: FormValues) => {
     saveData(data);
