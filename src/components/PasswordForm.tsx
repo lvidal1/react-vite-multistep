@@ -30,7 +30,7 @@ const PasswordForm = ({ saveData }: FormProps) => {
           .required()
           .oneOf([ref('password')], t('error.repeat_password.doesNotMatch') || '')
       }),
-    [object, string, ref]
+    [t]
   );
 
   const {
