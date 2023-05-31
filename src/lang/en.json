@@ -25,6 +25,16 @@
       "placeholder": "Select country"
     }
   },
+  "passwordForm": {
+    "password": {
+      "label": "Password",
+      "placeholder": "Input password"
+    },
+    "repeat_password": {
+      "label": "Repeat password",
+      "placeholder": "Repeat password"
+    }
+  },
   "button": {
     "continue": "Continue"
   }
