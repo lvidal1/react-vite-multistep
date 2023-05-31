@@ -7,6 +7,10 @@
     "title": "Super test form",
     "copy": "Initial info"
   },
+  "password": {
+    "title": "Super test form",
+    "copy": "Password screen"
+  },
   "userForm": {
     "username": {
       "label": "Username",
@@ -21,7 +25,25 @@
       "placeholder": "Select country"
     }
   },
+  "passwordForm": {
+    "password": {
+      "label": "Password",
+      "placeholder": "Input password"
+    },
+    "repeat_password": {
+      "label": "Repeat password",
+      "placeholder": "Repeat password"
+    }
+  },
   "button": {
     "continue": "Continue"
+  },
+  "error": {
+    "password": {
+      "min": "Password must be at 3 char long"
+    },
+    "repeat_password": {
+      "doesNotMatch": "Passwords does not match"
+    }
   }
 }
