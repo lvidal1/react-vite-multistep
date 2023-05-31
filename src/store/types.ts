@@ -22,6 +22,7 @@ export interface IAppStore {
   data?: ICountryResponse;
   user?: IUser;
   fetchCountries: () => Promise<void>;
+  setUserInfo: (info: IUser) => void;
   clear: () => void;
   step?: number;
 }
