@@ -31,6 +31,7 @@ export interface IAppStore {
 }
 
 export interface IStep {
+  label: string;
   path: string;
   completed: boolean;
 }

@@ -1,5 +1,6 @@
 import styles from '@styles/Layout.module.scss';
 import imageURL from '@images/bg.jpg';
+import Navigation from './Navigation';
 
 type LayoutProps = {
   children?: JSX.Element | string;
@@ -19,6 +20,7 @@ function Layout({ children, title, copy }: LayoutProps) {
         <h1 className={styles.title}>{title}</h1>
         <p className={styles.copy}>{copy}</p>
       </header>
+      <Navigation />
       <main className={styles.main}>{children}</main>
     </div>
   );
