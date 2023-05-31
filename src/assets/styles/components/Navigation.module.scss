@@ -1,6 +1,6 @@
 .steps {
-  @apply flex flex-row justify-evenly mt-10;
-  @apply md:space-y-3 md:flex-col md:mt-0;
+  @apply flex flex-row justify-evenly mt-4;
+  @apply md:space-y-3 md:flex-col md:mt-0 md:absolute;
 }
 
 .step {

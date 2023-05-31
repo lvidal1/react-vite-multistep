@@ -2,8 +2,9 @@ import Layout from '@components/Layout';
 import PasswordForm from '@components/PasswordForm';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import appStore from '../store/appStore';
-import useWizard from '../hooks/useWizard';
+import appStore from '@store/appStore';
+import useWizard from '@hooks/useWizard';
+import Wizard from '@components/Wizard';
 
 function Password() {
   const { t } = useTranslation();
@@ -22,7 +23,9 @@ function Password() {
 
   return (
     <Layout title={t('password.title')} copy={t('password.copy')}>
-      <PasswordForm saveData={next} />
+      <Wizard>
+        <PasswordForm saveData={next} />
+      </Wizard>
     </Layout>
   );
 }
