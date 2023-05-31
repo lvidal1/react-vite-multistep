@@ -1,0 +1,20 @@
+.container {
+  @apply bg-purple-100 max-w-sm/1 mx-auto rounded-3xl;
+  @apply px-5 py-10 space-y-8;
+}
+
+.detailContent {
+  @apply space-y-6 mt-4;
+}
+
+.detailRow {
+  @apply flex justify-between;
+}
+
+.detailLabel {
+  @apply text-purple-300 text-sm;
+}
+
+.detailValue {
+  @apply text-white text-sm;
+}

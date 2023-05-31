@@ -11,6 +11,10 @@
     "title": "Super test form",
     "copy": "Password screen"
   },
+  "review": {
+    "title": "Super test form",
+    "copy": "Review screen"
+  },
   "userForm": {
     "username": {
       "label": "Username",
@@ -35,8 +39,20 @@
       "placeholder": "Repeat password"
     }
   },
+  "reviewForm": {
+    "username": {
+      "label": "Username"
+    },
+    "email": {
+      "label": "Email"
+    },
+    "country": {
+      "label": "Country"
+    }
+  },
   "button": {
-    "continue": "Continue"
+    "continue": "Continue",
+    "complete": "Complete"
   },
   "error": {
     "password": {
