@@ -17,7 +17,7 @@ type FormValues = {
 
 type FormProps = {
   saveData: (data: FormValues) => void;
-  defaultValues: IUser;
+  defaultValues?: IUser;
 };
 
 const validationSchema = object().shape({
