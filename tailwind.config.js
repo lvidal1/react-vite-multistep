@@ -7,6 +7,8 @@ export default {
         "purple-100": "#817CA5",
         "purple-200": "#413C5F",
         "purple-300": "#CECAEB",
+        "purple-400": "#5845DD",
+        "purple-500": "#C9C5E8",
         "error": "#be123c"
       },
       height: {

@@ -1,0 +1,32 @@
+.steps {
+  @apply flex flex-row justify-evenly mt-4;
+  @apply md:space-y-3 md:flex-col md:mt-0 md:absolute;
+}
+
+.step {
+  @apply flex items-center space-x-2 px-2;
+}
+
+.icon {
+  @apply h-4 w-4 rounded-sm;
+
+  &__current {
+    @apply bg-purple-400;
+  }
+
+  &__completed {
+    @apply bg-purple-100;
+  }
+
+  &__next {
+    @apply bg-purple-500;
+  }
+}
+
+.label {
+  @apply text-purple-100;
+
+  &__clickable {
+    @apply cursor-pointer;
+  }
+}

@@ -4,9 +4,9 @@ import { IAppStore, ICountryResponse, IStep } from './types';
 import { getCountries } from '../services/countries';
 
 const steps: IStep[] = [
-  { path: '/initial-info', completed: false },
-  { path: '/password', completed: false },
-  { path: '/review', completed: false }
+  { label: 'Initial info', path: '/initial-info', completed: false },
+  { label: 'Password screen', path: '/password', completed: false },
+  { label: 'Review', path: '/review', completed: false }
 ];
 
 const initialState = {

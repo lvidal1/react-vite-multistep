@@ -2,8 +2,9 @@ import Layout from '@components/Layout';
 import ReviewForm from '@components/ReviewForm';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import appStore from '../store/appStore';
-import useWizard from '../hooks/useWizard';
+import appStore from '@store/appStore';
+import useWizard from '@hooks/useWizard';
+import Wizard from '@components/Wizard';
 
 function Review() {
   const { t } = useTranslation();
@@ -20,7 +21,9 @@ function Review() {
 
   return (
     <Layout title={t('review.title')} copy={t('review.copy')}>
-      <ReviewForm saveData={next} defaultValues={user} />
+      <Wizard>
+        <ReviewForm saveData={next} defaultValues={user} />
+      </Wizard>
     </Layout>
   );
 }
