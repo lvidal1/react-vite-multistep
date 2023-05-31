@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from "@testing-library/user-event";
 import InitialInfo from '../../src/pages/InitialInfo';
 
@@ -13,8 +13,13 @@ jest.mock('react-i18next', () => ({
 describe("InitialInfo page", () => {
 
   it("should include form", async () => {
+
     renderForm(<InitialInfo />);
-    expect(screen.getByTestId("userForm")).toBeInTheDocument()
+
+    await waitFor(() => {
+      expect(screen.getByTestId("userForm")).toBeInTheDocument()
+    })
+
   });
 
 });
