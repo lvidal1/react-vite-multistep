@@ -17,7 +17,7 @@ describe("Review page", () => {
     renderForm(<Review />);
 
     await waitFor(() => {
-      expect(screen.getByTestId("PasswordForm")).toBeInTheDocument()
+      expect(screen.getByTestId("ReviewForm")).toBeInTheDocument()
     })
 
   });

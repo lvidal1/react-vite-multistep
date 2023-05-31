@@ -6,6 +6,7 @@ export default {
       colors: {
         "purple-100": "#817CA5",
         "purple-200": "#413C5F",
+        "purple-300": "#CECAEB",
         "error": "#be123c"
       },
       height: {

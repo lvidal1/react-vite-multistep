@@ -39,8 +39,20 @@
       "placeholder": "Repeat password"
     }
   },
+  "reviewForm": {
+    "username": {
+      "label": "Username"
+    },
+    "email": {
+      "label": "Email"
+    },
+    "country": {
+      "label": "Country"
+    }
+  },
   "button": {
-    "continue": "Continue"
+    "continue": "Continue",
+    "complete": "Complete"
   },
   "error": {
     "password": {

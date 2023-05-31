@@ -1,9 +1,11 @@
 import Layout from '@components/Layout';
-import PasswordForm from '@components/PasswordForm';
+import ReviewForm from '@components/ReviewForm';
 import { useTranslation } from 'react-i18next';
+import appStore from '../store/appStore';
 
 function Review() {
   const { t } = useTranslation();
+  const { user } = appStore();
 
   const next = () => {
     console.log('Complete');
@@ -11,7 +13,7 @@ function Review() {
 
   return (
     <Layout title={t('review.title')} copy={t('review.copy')}>
-      <PasswordForm saveData={next} />
+      <ReviewForm saveData={next} defaultValues={user} />
     </Layout>
   );
 }
