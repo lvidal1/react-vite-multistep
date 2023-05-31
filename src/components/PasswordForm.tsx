@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import styles from '@styles/components/PasswordForm.module.scss';
 import Input from './Input';
 import Button from './Button';
+import { useCallback } from 'react';
 
 type FormValues = {
   password: string;
@@ -19,21 +20,25 @@ type FormProps = {
 const PasswordForm = ({ saveData }: FormProps) => {
   const { t } = useTranslation();
 
-  const validationSchema = object().shape({
-    password: string()
-      .required()
-      .min(3, t('error.password.min') || ''),
-    repeat_password: string()
-      .required()
-      .oneOf([ref('password')], t('error.repeat_password.doesNotMatch') || '')
-  });
+  const validationSchema = useCallback(
+    () =>
+      object().shape({
+        password: string()
+          .required()
+          .min(3, t('error.password.min') || ''),
+        repeat_password: string()
+          .required()
+          .oneOf([ref('password')], t('error.repeat_password.doesNotMatch') || '')
+      }),
+    [object, string, ref]
+  );
 
   const {
     register,
     handleSubmit,
     formState: { isValid, errors }
   } = useForm<FormValues>({
-    resolver: yupResolver(validationSchema),
+    resolver: yupResolver(validationSchema()),
     mode: 'onChange'
   });
 
