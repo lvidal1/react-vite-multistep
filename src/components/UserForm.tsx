@@ -7,6 +7,7 @@ import styles from '@styles/components/UserForm.module.scss';
 import Input from './Input';
 import Select from './Select';
 import Button from './Button';
+import { IUser } from '../store/types';
 
 type FormValues = {
   username: string;
@@ -16,6 +17,7 @@ type FormValues = {
 
 type FormProps = {
   saveData: (data: FormValues) => void;
+  defaultValues?: IUser;
 };
 
 const validationSchema = object().shape({
@@ -24,12 +26,16 @@ const validationSchema = object().shape({
   country: string().required()
 });
 
-const UserForm = ({ saveData }: FormProps) => {
+const UserForm = ({ saveData, defaultValues }: FormProps) => {
   const {
     register,
     handleSubmit,
     formState: { isValid, errors }
-  } = useForm<FormValues>({ resolver: yupResolver(validationSchema), mode: 'onChange' });
+  } = useForm<FormValues>({
+    resolver: yupResolver(validationSchema),
+    mode: 'onChange',
+    defaultValues
+  });
 
   const { t } = useTranslation();
 

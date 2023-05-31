@@ -15,7 +15,7 @@ const getError = (err: any) => err?.message || err?.data?.message || 'Unexpected
 const appStore = create(
   devtools(
     persist<IAppStore>(
-      (set) => ({
+      (set, get) => ({
         ...initialState,
         countries: [],
         fetchCountries: async () => {
@@ -26,6 +26,10 @@ const appStore = create(
           } catch (err: any) {
             set(() => ({ isLoading: false, error: getError(err) }));
           }
+        },
+        setUserInfo: (payload) => {
+          const userDetails = get().user;
+          set(() => ({ user: { ...userDetails, ...payload } }));
         },
         clear: () => {
           set(() => initialState);
