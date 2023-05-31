@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from "@testing-library/user-event";
 import PasswordForm from '../../src/components/PasswordForm';
 
@@ -19,6 +19,18 @@ describe("PasswordForm", () => {
     await user.type(screen.getByTestId("repeat_password"), "dummyPass1");
 
     expect(mockSave).not.toBeCalled();
+  });
+
+  it("should run saveData callback", async () => {
+    const mockSave = jest.fn();
+    const { user } = renderForm(<PasswordForm saveData={mockSave} />);
+    await user.type(screen.getByTestId("password"), "dummyPass");
+    await user.type(screen.getByTestId("repeat_password"), "dummyPass");
+
+    waitFor(() => {
+      expect(mockSave).toHaveBeenCalled()
+    })
+
   });
 
 });

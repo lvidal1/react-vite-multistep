@@ -1,5 +1,5 @@
 import { useForm } from 'react-hook-form';
-import { object, string } from 'yup';
+import { object, string, ref } from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useTranslation } from 'react-i18next';
 
@@ -17,8 +17,10 @@ type FormProps = {
 };
 
 const validationSchema = object().shape({
-  password: string().required(),
-  repeat_password: string().required()
+  password: string().required().min(3, 'Password must be at 3 char long'),
+  repeat_password: string()
+    .required()
+    .oneOf([ref('password')], 'Passwords does not match')
 });
 
 const PasswordForm = ({ saveData }: FormProps) => {
