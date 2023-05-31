@@ -17,7 +17,7 @@ describe("Password page", () => {
     renderForm(<Password />);
 
     await waitFor(() => {
-      expect(screen.getByTestId("userForm")).toBeInTheDocument()
+      expect(screen.getByTestId("PasswordForm")).toBeInTheDocument()
     })
 
   });
