@@ -24,5 +24,13 @@ export interface IAppStore {
   fetchCountries: () => Promise<void>;
   setUserInfo: (info: IUser) => void;
   clear: () => void;
-  step?: number;
+  step: number;
+  steps: IStep[];
+  setCurrentStep: (step: number) => void;
+  completeStep: (step: number) => void;
+}
+
+export interface IStep {
+  path: string;
+  completed: boolean;
 }

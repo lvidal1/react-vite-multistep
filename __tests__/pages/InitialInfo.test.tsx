@@ -1,6 +1,14 @@
+import { BrowserRouter } from 'react-router-dom';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from "@testing-library/user-event";
 import InitialInfo from '../../src/pages/InitialInfo';
+
+const mockedUsedNavigate = jest.fn();
+
+jest.mock("react-router-dom", () => ({
+  ...(jest.requireActual("react-router-dom") as any),
+  useNavigate: () => mockedUsedNavigate
+}));
 
 jest.mock('react-i18next', () => ({
   useTranslation: () => {
@@ -14,7 +22,7 @@ describe("InitialInfo page", () => {
 
   it("should include form", async () => {
 
-    renderForm(<InitialInfo />);
+    renderPage(<InitialInfo />);
 
     await waitFor(() => {
       expect(screen.getByTestId("userForm")).toBeInTheDocument()
@@ -24,9 +32,11 @@ describe("InitialInfo page", () => {
 
 });
 
-const renderForm = (component: any) => {
+const renderPage = (component: any) => {
   return {
     user: userEvent.setup(),
-    ...render(component),
+    ...render(<BrowserRouter>
+      {component}
+    </BrowserRouter>),
   };
 }
