@@ -25,6 +25,10 @@ Open [http://localhost:5173/](http://localhost:5173/) with your browser to see t
 
 :round_pushpin: The front-end is deployed on [Netlify](https://www.netlify.com/)
 
+## Preview
+
+https://github.com/lvidal1/react-vite-multistep/assets/6495076/6f96a6c5-6c21-458b-b04b-fa46059f0480
+
 ## Features
 
 :newspaper: The UI shows a multi step journey where on different steps the user will be able to fill in his/her information.
