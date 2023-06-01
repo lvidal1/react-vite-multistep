@@ -21,6 +21,7 @@ function Input({ id, type, label, dataTestId, register, error, placeholder }: In
       </label>
       <div className={styles.inputSection}>
         <input
+          autoComplete="true"
           type={type}
           id={id}
           data-testid={dataTestId}
