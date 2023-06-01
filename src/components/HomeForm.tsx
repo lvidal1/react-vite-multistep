@@ -20,10 +20,9 @@ const HomeForm = ({ handleStart, handleReview, userInfo, wizardCompleted }: Form
   return (
     <div className={styles.container} data-testid="HomeForm">
       {wizardCompleted && (
-        <h4 className={styles.title}>
-          Hi there,{' '}
-          <span className={styles.username} onClick={handleReview}>
-            {' '}
+        <h4 className={styles.title} data-testid="HomeForm.title">
+          Hi there,
+          <span className={styles.username} onClick={handleReview} data-testid="HomeForm.username">
             {username}
           </span>
           !
