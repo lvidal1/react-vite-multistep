@@ -3,13 +3,13 @@ import UserForm from '@components/UserForm';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import appStore from '@store/appStore';
-import useWizard from '@hooks/useWizard';
-import Wizard from '@components/Wizard';
+import useStepper from '@hooks/useStepper';
+import Stepper from '@components/Stepper';
 
 function InitialInfo() {
   const { t } = useTranslation();
   const { setUserInfo, user } = appStore();
-  const { getNextStep } = useWizard();
+  const { getNextStep } = useStepper();
   const navigate = useNavigate();
 
   const next = (data: any) => {
@@ -22,9 +22,9 @@ function InitialInfo() {
 
   return (
     <Layout pageTitle={t('initialInfo.title')}>
-      <Wizard>
+      <Stepper>
         <UserForm saveData={next} defaultValues={user} />
-      </Wizard>
+      </Stepper>
     </Layout>
   );
 }

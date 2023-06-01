@@ -3,13 +3,13 @@ import ReviewForm from '@components/ReviewForm';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import appStore from '@store/appStore';
-import useWizard from '@hooks/useWizard';
-import Wizard from '@components/Wizard';
+import useStepper from '@hooks/useStepper';
+import Stepper from '@components/Stepper';
 
 function Review() {
   const { t } = useTranslation();
   const { user } = appStore();
-  const { getNextStep } = useWizard();
+  const { getNextStep } = useStepper();
   const navigate = useNavigate();
 
   const next = () => {
@@ -21,9 +21,9 @@ function Review() {
 
   return (
     <Layout pageTitle={t('review.title')}>
-      <Wizard>
+      <Stepper>
         <ReviewForm saveData={next} defaultValues={user} />
-      </Wizard>
+      </Stepper>
     </Layout>
   );
 }

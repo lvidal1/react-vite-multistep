@@ -1,16 +1,16 @@
 import Navigation from './Navigation';
 
-type WizardProps = {
+type StepperProps = {
   children?: JSX.Element | string;
 };
 
-function Wizard({ children }: WizardProps) {
+function Stepper({ children }: StepperProps) {
   return (
-    <div data-testid="Wizard">
+    <div data-testid="Stepper">
       <Navigation />
       <div className="mt-4 md:mt-0">{children}</div>
     </div>
   );
 }
 
-export default Wizard;
+export default Stepper;
