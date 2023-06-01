@@ -47,7 +47,7 @@ const ReviewForm = ({ saveData, defaultValues = {} }: FormProps) => {
         <div className={styles.detailRow}>
           <span className={styles.detailLabel}>{t('reviewForm.country.label')}</span>
           <span className={styles.detailValue} data-testid="country">
-            {country}
+            {country?.label}
           </span>
         </div>
       </div>

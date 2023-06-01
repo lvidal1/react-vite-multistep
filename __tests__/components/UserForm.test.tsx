@@ -17,7 +17,7 @@ describe("UserForm", () => {
     const { user } = renderForm(<UserForm saveData={mockSave} />);
     await user.type(screen.getByTestId("username"), "Leo");
     await user.type(screen.getByTestId("email"), "Vidal");
-    await user.click(screen.getByTestId("country"));
+    await user.click(screen.getByLabelText(/country/i));
 
     expect(mockSave).not.toBeCalled();
   });

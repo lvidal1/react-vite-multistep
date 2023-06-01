@@ -17,7 +17,10 @@ describe("ReviewForm", () => {
     const userInfo = {
       username: "dummy",
       email: "dummy@email.com",
-      country: "Peru"
+      country: {
+        label: "Peru",
+        value: "pe"
+      }
     }
     renderForm(<ReviewForm saveData={mockSave} defaultValues={userInfo} />);
 
