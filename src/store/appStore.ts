@@ -52,6 +52,10 @@ const appStore = create(
 
           currentSteps.splice(stepIndex, 1, newStep);
           set(() => ({ steps: currentSteps }));
+        },
+        completed: () => {
+          const user = get().user;
+          return (user?.username && user?.country) !== undefined;
         }
       }),
       {

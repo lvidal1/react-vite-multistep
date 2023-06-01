@@ -28,6 +28,7 @@ export interface IAppStore {
   steps: IStep[];
   setCurrentStep: (step: number) => void;
   completeStep: (step: number) => void;
+  completed: () => boolean;
 }
 
 export interface IStep {
