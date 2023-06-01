@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import styles from '@styles/components/Input.module.scss';
-import ErrorText from './ErrorText';
-import ErrorIcon from './icons/ErrorIcon';
+import ErrorText from '@components/ErrorText';
+import ErrorIcon from '@components/icons/ErrorIcon';
 
 type InputProps = {
   dataTestId: string;

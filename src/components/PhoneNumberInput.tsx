@@ -1,7 +1,7 @@
 import PhoneInput from 'react-phone-input-2';
 import styles from '@styles/components/Input.module.scss';
 import 'react-phone-input-2/lib/style.css';
-import ErrorText from './ErrorText';
+import ErrorText from '@components/ErrorText';
 
 type SelectProps = {
   dataTestId: string;

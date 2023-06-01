@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import appStore from '../store/appStore';
+import appStore from '@store/appStore';
 
 const FINAL_PATH = '/';
 

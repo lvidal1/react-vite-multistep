@@ -1,7 +1,7 @@
-import appStore from '../store/appStore';
+import appStore from '@store/appStore';
 import { useNavigate } from 'react-router-dom';
 import classNames from 'classnames';
-import { IStep } from '../store/types';
+import { IStep } from '@store/types';
 
 import styles from '@styles/components/Navigation.module.scss';
 

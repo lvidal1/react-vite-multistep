@@ -2,8 +2,8 @@ import { useTranslation } from 'react-i18next';
 
 import styles from '@styles/components/HomeForm.module.scss';
 
-import Button from './Button';
-import { IUser } from '../store/types';
+import Button from '@components/Button';
+import { IUser } from '@store/types';
 
 type FormProps = {
   handleStart: () => void;
