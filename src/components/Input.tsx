@@ -26,7 +26,7 @@ function Input({ id, type, label, dataTestId, register, error, placeholder }: In
           data-testid={dataTestId}
           {...register}
           placeholder={placeholder}
-          className={classNames(styles.input, error ? styles.inputError : '')}
+          className={classNames(styles.input)}
         />
         {error && <ErrorIcon className={styles.errorIcon} />}
       </div>

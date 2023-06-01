@@ -1,4 +1,9 @@
-.message {
+.messageBox {
   @apply flex items-center;
   @apply bg-error w-full h-6 text-white px-5 text-xs;
+}
+
+.messageInline {
+  @apply flex items-center;
+  @apply w-full h-6 text-error text-xs;
 }

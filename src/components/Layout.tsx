@@ -1,4 +1,4 @@
-import styles from '@styles/Layout.module.scss';
+import styles from '@styles/components/Layout.module.scss';
 import imageURL from '@images/bg.jpg';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
