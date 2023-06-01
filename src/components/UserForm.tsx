@@ -1,18 +1,18 @@
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import { object, string } from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useTranslation } from 'react-i18next';
 
 import styles from '@styles/components/UserForm.module.scss';
 import Input from './Input';
-import Select from './Select';
+import CountrySelect from './CountrySelect';
 import Button from './Button';
-import { IUser } from '../store/types';
+import { ICountryOption, IUser } from '../store/types';
 
 type FormValues = {
   username: string;
   email: string;
-  country: string;
+  country: ICountryOption;
 };
 
 type FormProps = {
@@ -23,13 +23,14 @@ type FormProps = {
 const validationSchema = object().shape({
   username: string().required(),
   email: string().email().required(),
-  country: string().required()
+  country: object().required()
 });
 
 const UserForm = ({ saveData, defaultValues }: FormProps) => {
   const {
     register,
     handleSubmit,
+    control,
     formState: { isValid, errors }
   } = useForm<FormValues>({
     resolver: yupResolver(validationSchema),
@@ -66,13 +67,20 @@ const UserForm = ({ saveData, defaultValues }: FormProps) => {
         placeholder={t('userForm.email.placeholder') ?? ''}
         error={errors.email?.message}
       />
-      <Select
-        id={'country'}
-        dataTestId={'country'}
-        register={register('country')}
-        label={t('userForm.country.label')}
-        placeholder={t('userForm.country.placeholder') ?? ''}
-        error={errors.country?.message}
+      <Controller
+        control={control}
+        name="country"
+        render={({ field: { onChange } }) => (
+          <CountrySelect
+            id={'country'}
+            dataTestId={'country'}
+            label={t('userForm.country.label')}
+            placeholder={t('userForm.country.placeholder') ?? ''}
+            error={errors.country?.message}
+            onChange={onChange}
+            value={defaultValues?.country}
+          />
+        )}
       />
       <Button label={t('button.continue')} dataTestId={'button'} disabled={!isValid} />
     </form>

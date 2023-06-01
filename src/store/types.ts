@@ -1,6 +1,6 @@
 export interface ICountry {
   name: string;
-  iso3: string;
+  iso2: string;
   dial: string;
 }
 
@@ -9,10 +9,15 @@ export interface ICountryResponse {
   results: number;
 }
 
+export interface ICountryOption {
+  value: string;
+  label: string;
+}
+
 export interface IUser {
   username?: string;
   email?: string;
-  country?: string;
+  country?: ICountryOption;
 }
 
 export interface IAppStore {
