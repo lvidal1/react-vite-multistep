@@ -4,11 +4,11 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useTranslation } from 'react-i18next';
 
 import styles from '@styles/components/UserForm.module.scss';
-import Input from './Input';
-import CountrySelect from './CountrySelect';
-import Button from './Button';
+import Input from '@components/Input';
+import CountrySelect from '@components/CountrySelect';
+import Button from '@components/Button';
 import { ICountryOption, IUser } from '@store/types';
-import PhoneNumberInput from './PhoneNumberInput';
+import PhoneNumberInput from '@components/PhoneNumberInput';
 
 type FormValues = {
   username: string;

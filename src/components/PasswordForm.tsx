@@ -4,8 +4,8 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useTranslation } from 'react-i18next';
 
 import styles from '@styles/components/PasswordForm.module.scss';
-import Input from './Input';
-import Button from './Button';
+import Input from '@components/Input';
+import Button from '@components/Button';
 import { useCallback } from 'react';
 
 type FormValues = {

@@ -1,13 +1,13 @@
 import Layout from '@components/Layout';
 import { useTranslation } from 'react-i18next';
-import useWizard from '@hooks/useWizard';
+import useStepper from '@hooks/useStepper';
 import { useNavigate } from 'react-router-dom';
 import HomeForm from '@components/HomeForm';
 import appStore from '@store/appStore';
 
 function Home() {
   const { t } = useTranslation();
-  const { getInitialStep, getReviewStep } = useWizard();
+  const { getInitialStep, getReviewStep } = useStepper();
   const { user, clear, completed } = appStore();
   const navigate = useNavigate();
 

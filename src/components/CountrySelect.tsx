@@ -1,10 +1,10 @@
 import styles from '@styles/components/Input.module.scss';
 import ErrorText from './ErrorText';
-import appStore from '../store/appStore';
+import appStore from '@store/appStore';
 import { useEffect, useState } from 'react';
 import Select, { SingleValue, StylesConfig, components } from 'react-select';
-import CheckIcon from './icons/CheckIcon';
-import ArrowDownIcon from './icons/ArrowDownIcon';
+import CheckIcon from '@components/icons/CheckIcon';
+import ArrowDownIcon from '@components/icons/ArrowDownIcon';
 
 type SelectProps = {
   dataTestId: string;

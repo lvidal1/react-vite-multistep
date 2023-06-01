@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import appStore from '../store/appStore';
+import appStore from '@store/appStore';
 
 const FINAL_PATH = '/';
 
-const useWizard = () => {
+const useStepper = () => {
   const location = useLocation();
   const { step: currentStep, setCurrentStep, steps, completeStep } = appStore();
   const [canAccess, setCanAccess] = useState(false);
@@ -63,4 +63,4 @@ const useWizard = () => {
   };
 };
 
-export default useWizard;
+export default useStepper;

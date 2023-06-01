@@ -2,8 +2,8 @@ import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 
 import styles from '@styles/components/ReviewForm.module.scss';
-import Button from './Button';
-import { IUser } from '../store/types';
+import Button from '@components/Button';
+import { IUser } from '@store/types';
 
 type FormProps = {
   saveData: () => void;

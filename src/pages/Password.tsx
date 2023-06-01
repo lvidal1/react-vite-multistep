@@ -3,13 +3,13 @@ import PasswordForm from '@components/PasswordForm';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import appStore from '@store/appStore';
-import useWizard from '@hooks/useWizard';
-import Wizard from '@components/Wizard';
+import useStepper from '@hooks/useStepper';
+import Stepper from '@components/Stepper';
 
 function Password() {
   const { t } = useTranslation();
   const { setUserInfo } = appStore();
-  const { getNextStep } = useWizard();
+  const { getNextStep } = useStepper();
   const navigate = useNavigate();
 
   const next = (data: any) => {
@@ -22,9 +22,9 @@ function Password() {
 
   return (
     <Layout pageTitle={t('password.title')}>
-      <Wizard>
+      <Stepper>
         <PasswordForm saveData={next} />
-      </Wizard>
+      </Stepper>
     </Layout>
   );
 }
