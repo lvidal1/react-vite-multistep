@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 import styles from '@styles/components/UserForm.module.scss';
 import Input from './Input';
-import Select from './Select';
+import CountrySelect from './CountrySelect';
 import Button from './Button';
 import { ICountryOption, IUser } from '../store/types';
 
@@ -71,7 +71,7 @@ const UserForm = ({ saveData, defaultValues }: FormProps) => {
         control={control}
         name="country"
         render={({ field: { onChange } }) => (
-          <Select
+          <CountrySelect
             id={'country'}
             dataTestId={'country'}
             label={t('userForm.country.label')}
