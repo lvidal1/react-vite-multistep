@@ -18,6 +18,7 @@ export interface IUser {
   username?: string;
   email?: string;
   country?: ICountryOption;
+  phone?: string;
 }
 
 export interface IAppStore {

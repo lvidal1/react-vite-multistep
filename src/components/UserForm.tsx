@@ -8,11 +8,13 @@ import Input from './Input';
 import CountrySelect from './CountrySelect';
 import Button from './Button';
 import { ICountryOption, IUser } from '../store/types';
+import PhoneNumberInput from './PhoneNumberInput';
 
 type FormValues = {
   username: string;
   email: string;
   country: ICountryOption;
+  phone: string;
 };
 
 type FormProps = {
@@ -23,7 +25,8 @@ type FormProps = {
 const validationSchema = object().shape({
   username: string().required(),
   email: string().email().required(),
-  country: object().required()
+  country: object().required(),
+  phone: string().required()
 });
 
 const UserForm = ({ saveData, defaultValues }: FormProps) => {
@@ -79,6 +82,21 @@ const UserForm = ({ saveData, defaultValues }: FormProps) => {
             error={errors.country?.message}
             onChange={onChange}
             value={defaultValues?.country}
+          />
+        )}
+      />
+      <Controller
+        control={control}
+        name="phone"
+        render={({ field: { onChange } }) => (
+          <PhoneNumberInput
+            id={'phone'}
+            dataTestId={'phone'}
+            label={t('userForm.phone.label')}
+            placeholder={t('userForm.phone.placeholder') ?? ''}
+            error={errors.country?.message}
+            onChange={onChange}
+            value={defaultValues?.phone}
           />
         )}
       />
