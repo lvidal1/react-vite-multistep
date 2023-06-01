@@ -15,14 +15,13 @@ function Password() {
   const next = (data: any) => {
     setUserInfo(data);
     const nextStep = getNextStep();
-    console.log(nextStep);
     if (nextStep) {
       navigate(nextStep);
     }
   };
 
   return (
-    <Layout title={t('password.title')} copy={t('password.copy')}>
+    <Layout pageTitle={t('password.title')}>
       <Wizard>
         <PasswordForm saveData={next} />
       </Wizard>

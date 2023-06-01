@@ -52,7 +52,7 @@ const PasswordForm = ({ saveData }: FormProps) => {
       className={styles.container}
       data-testid="PasswordForm">
       <Input
-        type={'text'}
+        type={'password'}
         id={'password'}
         dataTestId={'password'}
         register={register('password')}
@@ -61,7 +61,7 @@ const PasswordForm = ({ saveData }: FormProps) => {
         error={errors.password?.message}
       />
       <Input
-        type={'text'}
+        type={'password'}
         id={'repeat_password'}
         dataTestId={'repeat_password'}
         register={register('repeat_password')}

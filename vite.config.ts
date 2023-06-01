@@ -1,10 +1,25 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import Unfonts from 'unplugin-fonts/vite'
 import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), Unfonts({
+  // Google Fonts API V2
+  google: {
+    preconnect: false,
+    display: 'swap',
+    injectTo: 'head-prepend',
+    families: [
+      {
+        name: 'Inter',
+        styles: 'wght@400;500;600',
+        defer: true,
+      },
+    ],
+  },
+   }),],
   resolve:{
     alias: {
       "@": path.resolve(__dirname, "./src"),

@@ -6,7 +6,7 @@ type ErrorProps = {
 
 function ErrorText({ message }: ErrorProps) {
   return (
-    <p className={styles.message}>
+    <p className={styles.messageBox}>
       <span>{message}</span>
     </p>
   );

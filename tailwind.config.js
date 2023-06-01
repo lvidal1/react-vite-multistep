@@ -2,6 +2,9 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
+    fontFamily: {
+      'sans': ['Inter', 'Helvetica', 'Arial', 'sans-serif'],
+    },
     extend: {
       colors: {
         "purple-100": "#817CA5",
@@ -9,7 +12,7 @@ export default {
         "purple-300": "#CECAEB",
         "purple-400": "#5845DD",
         "purple-500": "#C9C5E8",
-        "error": "#be123c"
+        "error": "#DA2121"
       },
       height: {
         '15': '3.75rem'

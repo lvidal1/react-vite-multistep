@@ -17,9 +17,9 @@
 }
 
 .title {
-  @apply text-center text-2xl lg:text-4xl text-purple-200;
+  @apply text-center text-2xl lg:text-4xl text-purple-200 cursor-pointer font-medium;
 }
 
-.copy {
+.pageTitle {
   @apply mt-4 text-center lg:text-2xl text-purple-100;
 }

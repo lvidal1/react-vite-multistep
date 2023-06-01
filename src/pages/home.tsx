@@ -27,7 +27,7 @@ function Home() {
   };
 
   return (
-    <Layout title={t('home.title')} copy={t('home.copy')}>
+    <Layout pageTitle={t('home.title')}>
       <HomeForm
         handleReview={handleReview}
         handleStart={handleStart}
