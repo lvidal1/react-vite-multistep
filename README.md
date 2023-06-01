@@ -12,7 +12,7 @@ This is a frontend project built with Vite, React, Zustand and TailwindCSS
 # Install dependencies
 yarn install
 # Run the app
-yarn start
+yarn dev
 ```
 
 Open [http://localhost:5173/](http://localhost:5173/) with your browser to see the result.
