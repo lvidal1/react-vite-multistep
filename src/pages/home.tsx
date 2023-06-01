@@ -7,7 +7,7 @@ import appStore from '@store/appStore';
 
 function Home() {
   const { t } = useTranslation();
-  const { getInitialStep } = useWizard();
+  const { getInitialStep, getReviewStep } = useWizard();
   const { user, clear, completed } = appStore();
   const navigate = useNavigate();
 
@@ -19,9 +19,21 @@ function Home() {
     }
   };
 
+  const handleReview = () => {
+    const reviewStep = getReviewStep();
+    if (reviewStep) {
+      navigate(reviewStep);
+    }
+  };
+
   return (
     <Layout title={t('home.title')} copy={t('home.copy')}>
-      <HomeForm userInfo={user} wizardCompleted={completed()} start={handleStart} />
+      <HomeForm
+        handleReview={handleReview}
+        handleStart={handleStart}
+        userInfo={user}
+        wizardCompleted={completed()}
+      />
     </Layout>
   );
 }

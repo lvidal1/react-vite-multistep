@@ -33,6 +33,10 @@ const useWizard = () => {
     return steps[0]?.path;
   };
 
+  const getReviewStep = () => {
+    return steps[steps.length - 1]?.path;
+  };
+
   const getNextStep = () => {
     if (canAccess) {
       completeStep(currentStep);
@@ -52,6 +56,7 @@ const useWizard = () => {
 
   return {
     getInitialStep,
+    getReviewStep,
     currentStep,
     getNextStep,
     canAccess

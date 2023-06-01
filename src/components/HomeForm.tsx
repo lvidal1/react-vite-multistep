@@ -6,32 +6,33 @@ import Button from './Button';
 import { IUser } from '../store/types';
 
 type FormProps = {
-  start: () => void;
+  handleStart: () => void;
+  handleReview: () => void;
   userInfo?: IUser;
   wizardCompleted: boolean;
 };
 
-const HomeForm = ({ start, userInfo, wizardCompleted }: FormProps) => {
+const HomeForm = ({ handleStart, handleReview, userInfo, wizardCompleted }: FormProps) => {
   const { t } = useTranslation();
-
-  const submitHandler = () => {
-    start();
-  };
 
   const { username } = userInfo || {};
 
   return (
     <div className={styles.container} data-testid="HomeForm">
       {wizardCompleted && (
-        <h4 className="text-white text-3xl text-center">
-          Hi there, <span className="underline"> {username}</span>!
+        <h4 className={styles.title}>
+          Hi there,{' '}
+          <span className={styles.username} onClick={handleReview}>
+            {' '}
+            {username}
+          </span>
+          !
         </h4>
       )}
-
       <Button
         label={wizardCompleted ? t('button.retry') : t('button.start')}
         dataTestId={'button'}
-        onClick={submitHandler}
+        onClick={handleStart}
       />
     </div>
   );
