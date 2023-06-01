@@ -24,6 +24,10 @@
     "country": {
       "label": "Country",
       "placeholder": "Select country"
+    },
+    "phone": {
+      "label": "Phone",
+      "placeholder": "Input phone"
     }
   },
   "passwordForm": {
