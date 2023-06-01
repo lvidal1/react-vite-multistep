@@ -1,4 +1,4 @@
-# toolbox-file-app
+# Vite Multi Step app
 
 This is a frontend project built with Vite, React, Zustand and TailwindCSS
 
@@ -21,7 +21,7 @@ Open [http://localhost:5173/](http://localhost:5173/) with your browser to see t
 
 :rocket: Check it out on https://react-multistep.netlify.app/
 
-:round_pushpin: It renders a demo static front-end that shows a basic stepper to collect user information
+:round_pushpin: It renders a demo static front-end that shows a multi-step app to collect user information
 
 :round_pushpin: The front-end is deployed on [Netlify](https://www.netlify.com/)
 
