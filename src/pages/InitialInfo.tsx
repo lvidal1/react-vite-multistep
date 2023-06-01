@@ -21,7 +21,7 @@ function InitialInfo() {
   };
 
   return (
-    <Layout title={t('initialInfo.title')} copy={t('initialInfo.copy')}>
+    <Layout pageTitle={t('initialInfo.title')}>
       <Wizard>
         <UserForm saveData={next} defaultValues={user} />
       </Wizard>

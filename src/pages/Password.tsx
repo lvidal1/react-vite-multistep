@@ -22,7 +22,7 @@ function Password() {
   };
 
   return (
-    <Layout title={t('password.title')} copy={t('password.copy')}>
+    <Layout pageTitle={t('password.title')}>
       <Wizard>
         <PasswordForm saveData={next} />
       </Wizard>

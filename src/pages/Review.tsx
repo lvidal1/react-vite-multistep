@@ -20,7 +20,7 @@ function Review() {
   };
 
   return (
-    <Layout title={t('review.title')} copy={t('review.copy')}>
+    <Layout pageTitle={t('review.title')}>
       <Wizard>
         <ReviewForm saveData={next} defaultValues={user} />
       </Wizard>

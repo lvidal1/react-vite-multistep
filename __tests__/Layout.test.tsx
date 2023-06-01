@@ -10,6 +10,14 @@ jest.mock("react-router-dom", () => ({
   useNavigate: () => mockedUsedNavigate
 }));
 
+jest.mock('react-i18next', () => ({
+  useTranslation: () => {
+    return {
+      t: (str: string): string => str,
+    };
+  },
+}));
+
 describe("<Layout />", function () {
 
   it("should mount correctly", function () {

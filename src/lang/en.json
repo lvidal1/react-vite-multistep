@@ -1,19 +1,16 @@
 {
+  "web.title": "Super test form",
   "home": {
-    "title": "Super test form",
-    "copy": "Welcome to the home page"
+    "title": "Welcome to the home page"
   },
   "initialInfo": {
-    "title": "Super test form",
-    "copy": "Initial info"
+    "title": "Initial info"
   },
   "password": {
-    "title": "Super test form",
-    "copy": "Password screen"
+    "title": "Password screen"
   },
   "review": {
-    "title": "Super test form",
-    "copy": "Review screen"
+    "title": "Review screen"
   },
   "userForm": {
     "username": {
