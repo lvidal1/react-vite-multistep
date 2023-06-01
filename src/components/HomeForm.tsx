@@ -21,7 +21,7 @@ const HomeForm = ({ start, userInfo, wizardCompleted }: FormProps) => {
   const { username } = userInfo || {};
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} data-testid="HomeForm">
       {wizardCompleted && (
         <h4 className="text-white text-3xl text-center">
           Hi there, <span className="underline"> {username}</span>!
