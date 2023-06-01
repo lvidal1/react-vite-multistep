@@ -33,7 +33,7 @@ https://github.com/lvidal1/react-vite-multistep/assets/6495076/6f96a6c5-6c21-458
 
 :newspaper: The UI shows a multi step journey where on different steps the user will be able to fill in his/her information.
 
-:newspaper: Each page form is using `React Custom Form` to help the UI to validate and collect each piece of information.
+:newspaper: Each page form is using `React Hook Form` to help the UI to validate and collect each piece of information.
 
 :newspaper: The UI is connected to a `Zustand` store to manage state across different pages & component.
 
