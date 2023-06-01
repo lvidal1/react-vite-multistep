@@ -17,7 +17,7 @@
 }
 
 .title {
-  @apply text-center text-2xl lg:text-4xl text-purple-200 cursor-pointer;
+  @apply text-center text-2xl lg:text-4xl text-purple-200 cursor-pointer font-medium;
 }
 
 .pageTitle {
