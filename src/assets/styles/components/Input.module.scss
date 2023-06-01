@@ -6,6 +6,10 @@
   @apply relative;
 }
 
+.customSection {
+  @apply mt-1;
+}
+
 .errorIcon {
   @apply absolute top-4 right-3;
 }

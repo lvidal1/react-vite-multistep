@@ -11,6 +11,7 @@ type SelectProps = {
   placeholder?: string;
   onChange: (e: string) => void;
   value?: string;
+  country?: string;
 };
 
 function PhoneNumberInput({
@@ -20,22 +21,25 @@ function PhoneNumberInput({
   placeholder,
   onChange,
   value,
-  dataTestId
+  dataTestId,
+  country
 }: SelectProps) {
   return (
     <div className={styles.formGroup} data-testid={dataTestId}>
       <label htmlFor={id} className={styles.label}>
         {label}
       </label>
-
-      <PhoneInput
-        value={value}
-        onChange={(e) => onChange(e)}
-        disableDropdown
-        placeholder={placeholder}
-        containerStyle={{ width: '100%' }}
-        inputStyle={{ width: '100%', borderRadius: 0 }}
-      />
+      <div className={styles.customSection}>
+        <PhoneInput
+          country={country}
+          value={value}
+          onChange={(e) => onChange(e)}
+          disableDropdown
+          placeholder={placeholder}
+          containerStyle={{ width: '100%' }}
+          inputStyle={{ width: '100%', borderRadius: 0, height: '2.5rem' }}
+        />
+      </div>
       {error && <ErrorText message={error} />}
     </div>
   );
