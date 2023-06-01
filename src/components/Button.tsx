@@ -6,12 +6,13 @@ type ButtonProps = {
   disabled?: boolean;
   label: string;
   onClick?: () => void;
+  className?: string;
 };
 
-function Button({ dataTestId, label, disabled, onClick }: ButtonProps) {
+function Button({ dataTestId, label, disabled, onClick, className }: ButtonProps) {
   return (
     <button
-      className={classNames(styles.button, disabled ? styles.disabled : '')}
+      className={classNames(styles.button, disabled ? styles.disabled : '', className)}
       data-testid={dataTestId}
       disabled={disabled}
       onClick={onClick}>

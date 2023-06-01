@@ -52,7 +52,9 @@
   },
   "button": {
     "continue": "Continue",
-    "complete": "Complete"
+    "complete": "Complete",
+    "start": "Start journey",
+    "retry": "Try again"
   },
   "error": {
     "password": {
