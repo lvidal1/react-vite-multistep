@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import styles from '@styles/components/Input.module.scss';
 import ErrorText from './ErrorText';
+import ErrorIcon from './icons/ErrorIcon';
 
 type InputProps = {
   dataTestId: string;
@@ -18,14 +19,17 @@ function Input({ id, type, label, dataTestId, register, error, placeholder }: In
       <label htmlFor={id} className={styles.label}>
         {label}
       </label>
-      <input
-        type={type}
-        id={id}
-        data-testid={dataTestId}
-        {...register}
-        placeholder={placeholder}
-        className={classNames(styles.input, error ? styles.inputError : '')}
-      />
+      <div className={styles.inputSection}>
+        <input
+          type={type}
+          id={id}
+          data-testid={dataTestId}
+          {...register}
+          placeholder={placeholder}
+          className={classNames(styles.input, error ? styles.inputError : '')}
+        />
+        {error && <ErrorIcon className={styles.errorIcon} />}
+      </div>
       {error && <ErrorText message={error} />}
     </div>
   );

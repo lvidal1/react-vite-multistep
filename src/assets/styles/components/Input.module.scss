@@ -2,12 +2,20 @@
   @apply flex flex-col;
 }
 
+.inputSection {
+  @apply relative;
+}
+
+.errorIcon {
+  @apply absolute top-4 right-3;
+}
+
 .label {
   @apply text-white;
 }
 
 .input {
-  @apply h-10 px-4 outline-none text-sm text-purple-200 mt-1;
+  @apply h-10 px-4 outline-none text-sm text-purple-200 mt-1 w-full;
 }
 
 .inputError {
