@@ -9,7 +9,6 @@ type LayoutProps = {
 };
 
 function Layout({ children, pageTitle }: LayoutProps) {
-
   const { t } = useTranslation();
   const navigate = useNavigate();
 
@@ -21,7 +20,9 @@ function Layout({ children, pageTitle }: LayoutProps) {
         backgroundImage: `url(${imageURL})`
       }}>
       <header className={styles.header}>
-        <h1 className={styles.title} onClick={() => navigate("/")}>{t("web.title")}</h1>
+        <h1 className={styles.title} onClick={() => navigate('/')}>
+          {t('web.title')}
+        </h1>
         <p className={styles.pageTitle}>{pageTitle}</p>
       </header>
       <main className={styles.main}>{children}</main>
