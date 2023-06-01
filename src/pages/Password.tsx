@@ -15,7 +15,6 @@ function Password() {
   const next = (data: any) => {
     setUserInfo(data);
     const nextStep = getNextStep();
-    console.log(nextStep);
     if (nextStep) {
       navigate(nextStep);
     }
